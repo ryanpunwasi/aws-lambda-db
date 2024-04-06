@@ -5,7 +5,5 @@ const getUserByEmail = async email => {
 };
 
 export const handler = async event => {
-  return await getUserByEmail(process.env.EMAIL);
+  return await getUserByEmail(event.email);
 };
-
-console.log(await handler());
